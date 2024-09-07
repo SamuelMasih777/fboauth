@@ -16,6 +16,9 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
+app.get('/',(req, res)=>{
+  res.send('Hello we are at Home-Page of fb-Oauth')
+})
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/pages', pageRoutes);
